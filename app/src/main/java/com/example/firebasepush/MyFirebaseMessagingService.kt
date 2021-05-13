@@ -89,7 +89,8 @@ class MyFirebaseMessagingService: FirebaseMessagingService() {
                 )
             }
             NotificationType.CUSTOM -> {
-                notificationBuilder.setStyle(NotificationCompat.DecoratedCustomViewStyle())
+                notificationBuilder.setStyle(
+                    NotificationCompat.DecoratedCustomViewStyle())
                     .setCustomBigContentView(RemoteViews(packageName, R.layout.view_custom_notification)
                         .apply {
                             setTextViewText(R.id.title, title)
